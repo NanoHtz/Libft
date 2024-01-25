@@ -1,0 +1,8 @@
+1-He de comprobar si los cabeceros aguantan guardados y actualizaciones
+2-Encontrar la forma de probar el codigo, wsl, distribucion linux
+3-Revisar codigo y ponerlo a prueba, con mains y las funciones a imitar
+4-Incluir la libreria, aprender como se hace
+5-Valores null
+6-aprender sobre git
+7-aprender sobre makefile
+Borrar los mains y las bibliotecas,stdio.h
