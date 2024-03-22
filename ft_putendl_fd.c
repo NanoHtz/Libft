@@ -1,30 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   strrchr.c                                          :+:      :+:    :+:   */
+/*   ft_putendl_fd.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: fgalvez- <fgalvez-@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/01/15 19:26:07 by fgalvez-          #+#    #+#             */
-/*   Updated: 2024/01/15 19:26:07 by fgalvez-         ###   ########.fr       */
+/*   Created: 2024/03/22 18:59:08 by fgalvez-          #+#    #+#             */
+/*   Updated: 2024/03/22 18:59:08 by fgalvez-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include "stdio.h"
 
-// Recorre una cadena de strings y devuelve el ultimo lugar de la memoria que sea igual a x
-
-char ft_strrchr(char *str,int x)
+void    ft_putendl_fd(char *str, int fd)
 {
-    int k;
-
-    k = ft_strlen(str);
-    while(k != 0)
+    int    i;
+    
+    i = 0;
+    while (str[i])
     {
-        if(str[k] == x)
-            return(&str[k]);
-        k--;
-    } 
-    return(0);
+        write(fd, &str[i], 1);
+        i++;
+    }
+    write(fd, "\n", 1);    
 }

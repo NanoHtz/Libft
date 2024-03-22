@@ -14,7 +14,7 @@
 
 int ft_isdigit(int x)
 {
-    if(x >= 0 && x <= 9) // utilizamos las comillas simples para indicar que no es asci, si no un digito
+    if(x >= 48 && x <= 57)
         return(1);
     return(0);
 }

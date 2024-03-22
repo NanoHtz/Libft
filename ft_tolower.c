@@ -11,13 +11,11 @@
 /* ************************************************************************** */
 
 #include "libft.h"
-#include "stdio.h"
 
-////me piden una funcion que convierta los caracteres de un string en minisculas
 
 int ft_tolower(int x)
 {
-    if(x >= 'A' && x <= 'Z') // usamos las comillas simples para definir que es un caracter 
+    if(x >= 'A' && x <= 'Z')
         x +=32;
     return(x);
 }

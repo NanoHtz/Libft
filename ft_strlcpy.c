@@ -1,20 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isalpha.c                                       :+:      :+:    :+:   */
+/*   ft_memmove.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: fgalvez- <fgalvez-@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/01/15 17:31:34 by fgalvez-          #+#    #+#             */
-/*   Updated: 2024/01/15 17:31:34 by fgalvez-         ###   ########.fr       */
+/*   Created: 2024/03/22 12:48:23 by fgalvez-          #+#    #+#             */
+/*   Updated: 2024/03/22 12:48:23 by fgalvez-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int ft_isalpha(int x)
+size_t ft_strlcpy(char *dst, const char*src, size_t dstsize)
 {
-    if (x >= 65 && x <= 90 || x >= 97 && x <= 122)
-        return(1);
-    return(0);
+    size_t src_len;
+
+    src_len = ft_strlen(src);
+    if (src_len + 1 < dstsize)
+        ft_memcpy(dst, src, src_len +1);
+    else if (dstsize !=0)
+    {
+        ft_memcpy(dst, src, dstsize -1);
+        dst[dstsize - 1] = 0;
+    }
+    return(src_len);
 }

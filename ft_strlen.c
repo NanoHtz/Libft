@@ -11,16 +11,14 @@
 /* ************************************************************************** */
 
 #include "libft.h"
-#include "stdio.h"
 
-//me piden una funcion que cuente el numero de caracteres de un string
 
-int ft_strlen(char *str) // debo usar un puntero para señalar al primer caracter del string
+syze_t ft_strlen(const char *str)
 {
-    int i; //creo un contador, para ir subiendo a medida aque avanza el recorrido
+    syze_t i;
 
     i=0;
-    while( str[i] != '/0') //un while, "mientras", mientras el caracter 0 se distinto que el nulo del final del string, se avanza un caracter
+    while( str[i] != '/0')
         i++;
     return(i);
 }
