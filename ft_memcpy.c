@@ -12,19 +12,19 @@
 
 #include "libft.h"
 
-void *ft_memcpy(void *dst, const void *src, syze_t n)
+void	*ft_memcpy(void *dst, const void *src, size_t n)
 {
-    unsigned char *aux_dst;
-    unsigned char *aux_src;
+	unsigned char	*aux_dst;
+	unsigned char	*aux_src;
 
-    if (dst == (void *)0 && src == (void *)0)
-        return(dst);
-    aux_dst = (unsigned char *) dst;
-    aux_src = (unsigned char *) src;
-    while (n > 0)
-    {
-        *(aux_dst++) = *(aux_src++);
-        n--;
-    }
-    return(dst);  
+	if (dst == (void *)0 && src == (void *)0)
+		return (dst);
+	aux_dst = (unsigned char *) dst;
+	aux_src = (unsigned char *) src;
+	while (n > 0)
+	{
+		*(aux_dst++) = *(aux_src++);
+		n--;
+	}
+	return (dst);
 }

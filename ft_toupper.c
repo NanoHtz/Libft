@@ -11,13 +11,10 @@
 /* ************************************************************************** */
 
 #include "libft.h"
-#include "stdio.h"
 
-//me piden una funcion que convierta los caracteres de un string en mayusculas
-
-int ft_toupper(int x)
+int	ft_toupper(int x)
 {
-    if(x >= 'a' && x <= 'z') // usamos las comillas simples para definir que es un caracter 
-        x -=32;
-    return(x);
+	if (x >= 'a' && x <= 'z')
+		x -= 32;
+	return (x);
 }

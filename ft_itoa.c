@@ -12,60 +12,97 @@
 
 #include "libft.h"
 
-static int int_len(long nbr);
-static char *pre_conv(int len);
+#include "libft.h"
 
-char *ft_itoa(int n)
+int	ft_is_negative(long *n)
 {
-    int len;
-    int i;
-    char *result;
-    long nbr;
-    
-    nbr = n;
-    len = int_len(nbr);
-    result = pre_conv(len);
-    if (!result)
-        return (NULL);
-    while (nbr != 0)
-    {
-        result[i] = ((nbr % 10) + 48);
-        nbr = nbr / 10;
-        i--;
-    }
-    if (n < 0)
-        result[0] = '-';
-    result[len] = 0;
-    return (result);
+	if (*n >= 0)
+		return (0);
+	else
+	{
+		*n = -(*n);
+		return (1);
+	}
 }
 
-static char *pre_conv(int len)
+int	ft_len(long n)
 {
-    char *tmp;
-    
-    tmp = malloc((len + 1) * sizeof(char));
-    if (!tmp)
-        return (NULL);
-    tmp[0] = '0';
-    return (tmp);
+	int	count;
+	int	temp_n;
+
+	temp_n = n;
+	count = 0;
+	if (n == 0)
+		return (1);
+	while (temp_n != 0)
+	{
+		temp_n = temp_n / 10;
+		count++;
+	}
+	if (ft_is_negative(&n))
+	{
+		count = count + 1;
+		return (count);
+	}
+	else
+		return (count);
 }
 
-static int_len(long nbr)
+char	*fill_numbers(long n, int i, char *str)
 {
-    int count;
-    
-    count = 0;
-    if (nbr < 0)
-    {
-        count++;
-        nbr = -nbr;
-    }
-    if (nbr == 0)
-        count++;
-    while (nbr != 0)
-    {
-        nbr /= 10;
-        count++;
-    }
-    return (count);
+	str[i--] = '\0';
+	if (ft_is_negative(&n))
+	{
+		str[0] = '-';
+		while (i > 0)
+		{
+			str[i] = (n % 10) + '0';
+			n = n / 10;
+			i--;
+		}
+	}
+	else
+	{
+		while (i >= 0)
+		{
+			str[i] = (n % 10) + '0';
+			n = n / 10;
+			i--;
+		}
+	}
+	return (str);
+}
+
+char	*ft_is_n_zero(long n)
+{
+	char	*str;
+
+	str = malloc(2 * sizeof(char));
+	if (!str)
+		return (NULL);
+	str[0] = n + '0';
+	str[1] = '\0';
+	return (str);
+}
+
+char	*ft_itoa(int n)
+{
+	char	*str;
+	size_t	count;
+	int		i;
+	long	new_n;
+
+	new_n = (size_t)n;
+	count = ft_len(new_n);
+	i = count;
+	if (new_n == 0)
+		str = ft_is_n_zero(new_n);
+	else
+	{
+		str = malloc((count + 1) * sizeof(char));
+		if (!str)
+			return (NULL);
+		str = fill_numbers(new_n, i, str);
+	}
+	return (str);
 }
