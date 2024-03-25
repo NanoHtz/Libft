@@ -3,63 +3,47 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strtrim.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: fgalvez- <fgalvez-@student.42madrid.com    +#+  +:+       +#+        */
+/*   By: fgalvez- <fgalvez-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/22 18:25:56 by fgalvez-          #+#    #+#             */
-/*   Updated: 2024/03/22 18:25:56 by fgalvez-         ###   ########.fr       */
+/*   Updated: 2024/03/25 23:27:52 by fgalvez-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static int	to_trim(const char *set, char c);
-static char	*new_str(const char *s1, size_t start, size_t end);
-
-char	*ft_strtrim(const char *s1, const char *set)
+static int	char_set(char c, char const *set)
 {
-	int	i;
 	int	j;
 
-	i = 0;
-	j = ft_strlen(s1) - 1;
-	if (ft_strlen(s1) == 0)
-		return (ft_strdup(""));
-	while (to_trim(set, s1[i]))
-		i++;
-	while (to_trim(set, s1[j]))
-		j--;
-	return (new_str(s1, i, j - (i - 1)));
-}
-
-static char	*new_str(const char *s1, size_t start, size_t len)
-{
-	char	*str;
-	size_t	i;
-
-	if (len <= 0 || start >= ft_strlen(s1))
-		return (ft_strdup(""));
-	str = ft_calloc(len + 1, sizeof(char));
-	if (!str)
-		return (NULL);
-	i = 0;
-	while (i < len)
+	j = 0;
+	while (set[j] != '\0')
 	{
-		str[i] = s1[start + i];
-		i++;
-	}
-	return (str);
-}
-
-static int	to_trim(const char *set, char c)
-{
-	int	i;
-
-	i = 0;
-	while (set[i])
-	{
-		if (c == set[i])
+		if (c == set[j])
 			return (1);
-		i++;
+		j++;
 	}
 	return (0);
+}
+
+char	*ft_strtrim(char const *s1, char const *set)
+{
+	int	i;
+	int	len;
+
+	i = 0;
+	len = ft_strlen(s1) - 1;
+	while (s1[i] != '\0')
+	{
+		if (!char_set(s1[i], set))
+			break ;
+		i++;
+	}
+	while (len >= 0)
+	{
+		if (!char_set(s1[len], set))
+			break ;
+		len--;
+	}
+	return (ft_substr(s1, i, len - i + 1));
 }
