@@ -26,6 +26,6 @@ void	ft_lstiter(t_list *lst, void (*f)(void *))
 			(*f)(iter->content);
 			iter = iter->next;
 		}
-		(*f)(iter->content);
+		(*f)(iter->content);// por que ?
 	}
 }
