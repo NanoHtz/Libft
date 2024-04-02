@@ -10,14 +10,21 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include<libft.h>
+#include "libft.h"
 
 void	ft_lstadd_back(t_list **lst, t_list *new)
 {
-	t_list *tail;
+	t_list	*tail;
 
-	tail = ft_lstlast(*lst);
-	if(!tail)
+	tail = *lst;
+	if (!tail)
 		*lst = new;
-	tail -> next = new;
+	else
+	{
+		while (tail->next)
+		{
+			tail = tail -> next;
+		}
+		tail ->next = new;
+	}
 }
