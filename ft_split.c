@@ -39,7 +39,7 @@ static size_t	word_length(const char *s, char c)
 	return (counter);
 }
 
-static void	*ft_free(char **s)
+static void	*ft_free_split(char **s)
 {
 	int	i;
 
@@ -72,7 +72,7 @@ char	**ft_split(char const *s, char c)
 		{
 			new[i] = ft_substr(s, j, word_length(s + j, c));
 			if (!new[i++])
-				return (ft_free(new));
+				return (ft_free_split(new));
 			j += word_length(s + j, c);
 		}
 		else
