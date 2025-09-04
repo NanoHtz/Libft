@@ -40,13 +40,17 @@ El resultado es un **archivo estático** `libft.a` que podrás vincular en todos
 ### 📚 Módulos y funciones
 
 **1) Cadenas**
-`ft_strlen:` Calcula la longitud de una cadena.
-`ft_strcpy, ft_strncpy:` Copian una cadena en otra.
-`ft_strdup:` Duplica una cadena en un nuevo bloque de memoria.
-`ft_strcat, ft_strncat:` Concatenan cadenas.
-`ft_strchr, ft_strrchr:` Localizan caracteres dentro de una cadena.
-`ft_strcmp, ft_strncmp:` Comparan cadenas de caracteres.
-`ft_strstr, ft_strnstr:` Encuentran subcadenas dentro de una cadena
+-`ft_strlen:` Calcula la longitud de una cadena.
+<br>
+-`ft_strcpy, ft_strncpy:` Copian una cadena en otra.
+<br>
+-`ft_strdup:` Duplica una cadena en un nuevo bloque de memoria.
+<br>
+-`ft_strcat, ft_strncat:` Concatenan cadenas.
+<br>
+-`ft_strchr, ft_strrchr:` Localizan caracteres dentro de una cadena.
+-`ft_strcmp, ft_strncmp:` Comparan cadenas de caracteres.
+-`ft_strstr, ft_strnstr:` Encuentran subcadenas dentro de una cadena
 
 **2) Caracteres**
 
