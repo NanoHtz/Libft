@@ -3,7 +3,7 @@
   <img src="https://raw.githubusercontent.com/NanoHtz/Assets/main/libft/banner.svg" alt="Libft banner">
 </p>
 
-<p align="center"><i>🧱 Libft (42 Cursus) — Tu biblioteca estándar en C desde cero: memoria, strings, caracteres y listas enlazadas; base reutilizable para el resto de proyectos 42.</i></p>
+<p align="center"><i>🧱 Libft — Tu biblioteca estándar en C desde cero: memoria, strings, caracteres y listas enlazadas; base reutilizable para el resto de proyectos 42.</i></p>
 
 ---
 
@@ -12,8 +12,6 @@
 - [¿Para qué?](#para-que)
 - [Explicación](#explicacion)
 - [Compilación](#compilacion)
-- [Uso](#uso)
-- [Salida esperada y pruebas](#salida)
 
 ---
 <a id="resumen"></a>
@@ -33,7 +31,6 @@ El resultado es un **archivo estático** `libft.a` que podrás vincular en todos
 - **Conversión y validación**: `atoi`/`itoa`, `isalpha`/`isdigit`…, y tratamiento de edge cases.
 - **Diseño de API**: prefijo `ft_`, firmas consistentes, documentación mínima por función.
 - **Makefile & organización**: compilar en `libft.a`, reglas `all/clean/fclean/re/bonus`.
-- **Norminette & estilo**: claridad, límites de líneas/argumentos, manejo de errores.
 
 ---
 
@@ -44,32 +41,20 @@ El resultado es un **archivo estático** `libft.a` que podrás vincular en todos
 
 **1) Memoria**
 - `ft_memset`, `ft_bzero`, `ft_memcpy`, `ft_memmove`, `ft_memchr`, `ft_memcmp`, `ft_calloc`
-- *Notas*:  
-  - `memmove` debe tolerar solapes; `memcpy` no.  
-  - `calloc` inicializa a `0` y comprueba overflow en `count * size`.
 
 **2) Cadenas (string)**
 - `ft_strlen`, `ft_strlcpy`, `ft_strlcat`, `ft_strchr`, `ft_strrchr`, `ft_strncmp`, `ft_strdup`, `ft_strnstr`
-- *Decisiones*:  
-  - `strlcpy/strlcat` devuelven longitud **total** esperada; evita overflows.  
-  - `strnstr` busca en ventana acotada (`len`).
 
 **3) Caracteres (ctype)**
 - `ft_isalpha`, `ft_isdigit`, `ft_isalnum`, `ft_isascii`, `ft_isprint`, `ft_toupper`, `ft_tolower`
-- *Detalle*: no dependas de `locale`; usa rangos ASCII.
 
 **4) Extra (utilidades)**
 - `ft_substr`, `ft_strjoin`, `ft_strtrim`, `ft_split`, `ft_itoa`, `ft_atoi`
-- *Edge cases*:  
-  - `substr` si `start > len(s)` → `""`.  
-  - `split` debe liberar parcial si un `malloc` falla.  
-  - `atoi` ignora espacios iniciales y signos repetidos válidos (`+`/`-` uno solo).
 
 **5) Salida por FD (`_fd`)**
 - `ft_putchar_fd`, `ft_putstr_fd`, `ft_putendl_fd`, `ft_putnbr_fd`
-- *Uso*: redirige salidas a `stdout`, `stderr` o ficheros sin `printf`.
 
-**6) Bonus: `t_list` (singly linked list)**
+**6) Bonus: `t_list`**
 ```c
 typedef struct s_list {
   void          *content;
