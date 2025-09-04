@@ -83,10 +83,10 @@ El resultado es un **archivo estático** `libft.a` que podrás vincular en todos
 
 **6) Salida por FD (`_fd`)**
 
--`ft_putchar_fd:` Escribe un carácter en un descriptor de archivo.
--`ft_putstr_fd:` Escribe una cadena en un descriptor de archivo.
--`ft_putendl_fd:` Escribe una cadena seguida de un salto de línea en un descriptor de archivo.
--`ft_putnbr_fd:` Escribe un número en un descriptor de archivo.
+- `ft_putchar_fd:` Escribe un carácter en un descriptor de archivo.
+- `ft_putstr_fd:` Escribe una cadena en un descriptor de archivo.
+- `ft_putendl_fd:` Escribe una cadena seguida de un salto de línea en un descriptor de archivo.
+- `ft_putnbr_fd:` Escribe un número en un descriptor de archivo.
 
 **6) Bonus: `t_list`**
 ```c
