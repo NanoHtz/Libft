@@ -59,5 +59,12 @@ void	ft_putchar_fd(char c, int fd);
 void	ft_putstr_fd(char *s, int fd);
 void	ft_putendl_fd(char *s, int fd);
 void	ft_putnbr_fd(int n, int fd);
+char	*ft_strndup(const char *s, size_t n);
+size_t	ft_strnlen(const char *s, size_t maxlen);
+long	ft_atol(const char *nptr);
+int		ft_strcspn(char *str, char c);
+int		ft_intlen(int n);
+void	*ft_realloc(void *ptr, size_t old_size, size_t new_size);
+
 
 #endif

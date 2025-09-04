@@ -29,24 +29,6 @@ static char	*ft_isnegative(int n, int len)
 	return (str);
 }
 
-static int	intlen(int n)
-{
-	int	i;
-
-	i = 0;
-	if (n < 0)
-	{
-		n *= -1;
-		i++;
-	}
-	while (n > 0)
-	{
-		n /= 10;
-		i++;
-	}
-	return (i);
-}
-
 char	*ft_itoa(int n)
 {
 	char	*str;
@@ -56,7 +38,7 @@ char	*ft_itoa(int n)
 		return (ft_strdup("-2147483648"));
 	if (n == 0)
 		return (ft_strdup("0"));
-	len = intlen(n);
+	len = ft_intlen(n);
 	if (n < 0)
 		return (ft_isnegative(n, len));
 	str = ft_calloc(len + 1, sizeof(char));

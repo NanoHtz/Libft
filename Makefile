@@ -49,7 +49,13 @@ SRC = ft_strlen.c \
 	ft_putchar_fd.c \
 	ft_putstr_fd.c \
 	ft_putendl_fd.c \
-	ft_putnbr_fd.c
+	ft_putnbr_fd.c \
+	ft_strndup.c \
+	ft_strnlen.c \
+	ft_isspace.c \
+	ft_atol.c \
+	ft_strcspn.c \
+	ft_realloc.c
 OBJ = $(SRC:.c=.o)
 
 
