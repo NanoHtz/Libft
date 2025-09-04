@@ -40,56 +40,53 @@ El resultado es un **archivo estático** `libft.a` que podrás vincular en todos
 ### 📚 Módulos y funciones
 
 **1) Cadenas**
+<br>
 -`ft_strlen:` Calcula la longitud de una cadena.
-<br>
 -`ft_strcpy, ft_strncpy:` Copian una cadena en otra.
-<br>
 -`ft_strdup:` Duplica una cadena en un nuevo bloque de memoria.
-<br>
 -`ft_strcat, ft_strncat:` Concatenan cadenas.
-<br>
 -`ft_strchr, ft_strrchr:` Localizan caracteres dentro de una cadena.
 -`ft_strcmp, ft_strncmp:` Comparan cadenas de caracteres.
 -`ft_strstr, ft_strnstr:` Encuentran subcadenas dentro de una cadena
 
 **2) Caracteres**
 
-`ft_isalpha:` Verifica si el carácter es alfabético.
-`ft_isdigit:` Verifica si el carácter es numérico.
-`ft_isalnum:` Verifica si el carácter es alfanumérico.
-`ft_isascii:` Verifica si el carácter es ASCII.
-`ft_isprint:` Verifica si el carácter es imprimible.
+-`ft_isalpha:` Verifica si el carácter es alfabético.
+-`ft_isdigit:` Verifica si el carácter es numérico.
+-`ft_isalnum:` Verifica si el carácter es alfanumérico.
+-`ft_isascii:` Verifica si el carácter es ASCII.
+-`ft_isprint:` Verifica si el carácter es imprimible.
 
 **3) Conversion**
 
-`ft_atoi:` Convierte una cadena en un número entero.
-`ft_itoa:` Convierte un número entero en una cadena.
-`ft_tolower, ft_toupper:` Convierten caracteres entre mayúsculas y minúsculas.
+-`ft_atoi:` Convierte una cadena en un número entero.
+-`ft_itoa:` Convierte un número entero en una cadena.
+-`ft_tolower, ft_toupper:` Convierten caracteres entre mayúsculas y minúsculas.
 
 **4) Memoria**
 
-`ft_memset:` Rellena un bloque de memoria con un valor específico.
-`ft_bzero:` Llena con ceros un bloque de memoria.
-`ft_memcpy, ft_memccpy:` Copian memoria de una ubicación a otra.
-`ft_memmove:` Mueve un bloque de memoria (seguro ante solapes).
-`ft_memchr:` Busca un byte en un bloque de memoria.
-`ft_memcmp:` Compara dos bloques de memoria.
-`ft_calloc:` Reserva y limpia un bloque de memoria.
+-`ft_memset:` Rellena un bloque de memoria con un valor específico.
+-`ft_bzero:` Llena con ceros un bloque de memoria.
+-`ft_memcpy, ft_memccpy:` Copian memoria de una ubicación a otra.
+-`ft_memmove:` Mueve un bloque de memoria (seguro ante solapes).
+-`ft_memchr:` Busca un byte en un bloque de memoria.
+-`ft_memcmp:` Compara dos bloques de memoria.
+-`ft_calloc:` Reserva y limpia un bloque de memoria.
 
 **5) Adicionales**
 
-`ft_substr:` Crea una subcadena a partir de una cadena dada.
-`ft_strjoin:` Une dos cadenas en una nueva cadena.
-`ft_strtrim:` Elimina caracteres en blanco al inicio y final de una cadena.
-`ft_split:` Divide una cadena en subcadenas utilizando un delimitador.
-`ft_strmapi:` Aplica una función a cada carácter de una cadena, generando una nueva.
+-`ft_substr:` Crea una subcadena a partir de una cadena dada.
+-`ft_strjoin:` Une dos cadenas en una nueva cadena.
+-`ft_strtrim:` Elimina caracteres en blanco al inicio y final de una cadena.
+-`ft_split:` Divide una cadena en subcadenas utilizando un delimitador.
+-`ft_strmapi:` Aplica una función a cada carácter de una cadena, generando una nueva.
 
 **6) Salida por FD (`_fd`)**
 
-`ft_putchar_fd:` Escribe un carácter en un descriptor de archivo.
-`ft_putstr_fd:` Escribe una cadena en un descriptor de archivo.
-`ft_putendl_fd:` Escribe una cadena seguida de un salto de línea en un descriptor de archivo.
-`ft_putnbr_fd:` Escribe un número en un descriptor de archivo.
+-`ft_putchar_fd:` Escribe un carácter en un descriptor de archivo.
+-`ft_putstr_fd:` Escribe una cadena en un descriptor de archivo.
+-`ft_putendl_fd:` Escribe una cadena seguida de un salto de línea en un descriptor de archivo.
+-`ft_putnbr_fd:` Escribe un número en un descriptor de archivo.
 
 **6) Bonus: `t_list`**
 ```c
