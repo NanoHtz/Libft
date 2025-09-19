@@ -12,6 +12,7 @@
 - [¿Para qué?](#para-que)
 - [Explicación](#explicacion)
 - [Compilación](#compilacion)
+- [Pruebas](#pruebas)
 
 ---
 <a id="resumen"></a>
@@ -121,4 +122,9 @@ make bonus   # añade las funciones de listas a libft.a
 make clean   # elimina .o
 make fclean  # elimina .o y libft.a
 make re      # recompila desde cero
-``
+```
+<a id="pruebas"></a>
+🛠️ Pruebas
+Recomiendo mucho el tester:
+<br>
+https://github.com/Tripouille/libftTester
