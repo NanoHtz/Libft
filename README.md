@@ -29,7 +29,6 @@ El resultado es un **archivo estático** `libft.a` que podrás vincular en todos
 - **Punteros y memoria**: regiones contiguas, `memcpy` vs `memmove`, ownership, `malloc`/`free`.
 - **Cadenas y caracteres**: funciones seguras de copia/concatenación (`strlcpy`, `strlcat`), búsquedas y cortes.
 - **Conversión y validación**: `atoi`/`itoa`, `isalpha`/`isdigit`…, y tratamiento de edge cases.
-- **Diseño de API**: prefijo `ft_`, firmas consistentes, documentación mínima por función.
 - **Makefile & organización**: compilar en `libft.a`, reglas `all/clean/fclean/re/bonus`.
 
 ---
