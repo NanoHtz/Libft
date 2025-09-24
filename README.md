@@ -6,7 +6,7 @@
 <p align="center"><i>🧱 Libft — Tu biblioteca estándar en C desde cero: memoria, strings, caracteres y listas enlazadas; base reutilizable para el resto de proyectos 42.</i></p>
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/NanoHtz/Assets/main/100.png" alt="Libft nota">
+  <img src="https://raw.githubusercontent.com/NanoHtz/Assets/main/100.png" alt="Libft nota" height="120">
 </p>
 ---
 
