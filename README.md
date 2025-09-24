@@ -8,7 +8,7 @@
 <p align="center">
   <img src="https://raw.githubusercontent.com/NanoHtz/Assets/main/100.png" alt="Libft nota" height="120">
 </p>
----
+
 
 ## Índice
 - [Resumen](#resumen)
