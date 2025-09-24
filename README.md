@@ -24,11 +24,15 @@
 **Libft** es una biblioteca en C que reimplementa funciones esenciales de la libc (manejo de memoria, cadenas, conversión y comprobación de caracteres) y añade utilidades propias (substring, split, join, trim, I/O sobre file descriptors y una **lista enlazada simple** `t_list` como bonus).  
 El resultado es un **archivo estático** `libft.a` que podrás vincular en todos tus proyectos del cursus.
 
-> Este proyecto sigue la **Norma oficial de 42** para estilo en C (Norminette).  
-> **Ideas clave (resumen no exhaustivo):** código legible, indentación consistente, líneas cortas,  
-> funciones pequeñas (~25 líneas), pocos parámetros por función, nombres claros en `snake_case`,  
-> variables declaradas al inicio del bloque, un statement por línea, headers con *include guards*,  
-> sin tabs ni espacios finales y salto de línea al final de cada archivo.
+> Este proyecto sigue la **Norma oficial de 42** para estilo en C (Norminette).
+> En todos los proyectos de 42, el uso de la gran mayoria de bibliotecas esta prohibido, siendo nuestro propio desarrollo libft el sustituto de las funciones básicas. 
+> - Código legible.  
+> - Funciones pequeñas (<25 líneas),
+> - 4 parámetros por función,
+> - Nombres claros en `snake_case` y en inglés.
+> - 1 responsabilidad por función.
+>  - Variables declaradas al inicio del bloque(maximo 4 por función).  
+
 
 ---
 
